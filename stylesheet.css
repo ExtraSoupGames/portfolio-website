@@ -5,7 +5,7 @@
     background-image: radial-gradient(circle, #b0a898 1px, transparent 1px);
     background-size: 20px 20px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 32px;
     box-sizing: border-box;
@@ -20,7 +20,7 @@
     overflow: hidden;
     border: 1px solid #d0ccc4;
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);
-    min-height: 500px;
+    min-height: calc(100vh - 64px);
 }
 
 .nav {
@@ -82,14 +82,14 @@
 }
 
 h1 .name-styling {
-    font-size: 48px;
+    font-size: 64px;
     color: #afbe7a;
     text-shadow: gray 2px 2px;
     transition: font-size 0.3s ease, color 0.3s ease;
 }
 
 h1 .name-styling:hover {
-    font-size: 56px;
+    font-size: 72px;
     color: #94a067;
 }
 
@@ -105,7 +105,7 @@ h1 {
     justify-content: center;
     align-items: flex-start;
     min-height: 400px;
-    padding: 40px;
+    padding: 10%;
 }
 
 .game-content {
@@ -142,4 +142,13 @@ h2 {
 
 .browser-intro, .game-content {
   animation: fadeIn 0.5s ease;
+}
+
+.personal-intro {
+    display: flex;
+    padding-top: 2%;
+    padding-left: 5%;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 200px;
 }
