@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .grid-bg {
     min-height: 100vh;
     width: 100%;
@@ -14,15 +18,12 @@
 .browser-window {
     width: 100%;
     max-width: 80%;
-    max-height: 90%;
     background: #fff;
     border-radius: 10px;
-    overflow: hidden;
     border: 1px solid #d0ccc4;
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);
     min-height: calc(100vh - 64px);
 }
-
 
 p {
     font-family: 'Roboto Mono', monospace;
@@ -144,8 +145,8 @@ h2 {
   }
 }
 
-.browser-intro, .game-content {
-  animation: fadeIn 0.5s ease;
+.browser-intro {
+    animation: fadeIn 0.5s ease both;
 }
 
 .personal-intro {
@@ -167,9 +168,9 @@ h2 {
 }
 
 hr {
-  border: none;
-  border-top: 1px solid #000;
-  width: 0;
+    border: none;
+    border-top: 1px solid #000;
+    width: 0;
 }
 
 hr.animate {
@@ -184,6 +185,7 @@ hr.animate {
 
 .project-title {
     padding-left: 10%;
+    text-shadow: gray 2px 2px;
 }
 
 .intro-content {
@@ -206,6 +208,11 @@ hr.animate {
     image-rendering: pixelated;
 }
 
+.coffee-sprite {
+    width: 60px;
+    image-rendering: pixelated;
+}
+
 .project-images-gd img {
     width: 275px;
     height: 400px;
@@ -222,18 +229,33 @@ hr.animate {
 .project-images-gd {
     display: grid;
     justify-content: centre;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas: 
         "due-process-img loco-comotives-img network-library-img"
-        "dp-desc lc-desc udp-desc";
+        "dp-desc lc-desc udp-desc"
+        "tidal-tussle-img traffic-game-img vr-project-img"
+        "tidal-tussle-desc traffic-game-desc vr-desc";
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 2%;
-    padding-bottom: 5%;
-    gap: 5%;
+    align-items: start;
+    gap: 8px 8px;
+    transition: transform 0.3s ease;
+    margin-top: 40px;
+    width: 80%;
 }
 
+.project-images-gd a {
+    text-decoration: none;
+    color: #bc4f62;
+    font-size: 28px;
+    transition: font-size 0.3s ease;
+}
+
+.project-images-gd a:hover {
+    font-size: 30px;
+}
 .due-process-img {
     grid-area: due-process-img;
 }
@@ -256,4 +278,35 @@ hr.animate {
 
 .udp-desc {
     grid-area: udp-desc;
+}
+
+.tidal-tussle-img {
+    grid-area: tidal-tussle-img;
+}
+
+.traffic-game-img {
+    grid-area: traffic-game-img;
+}
+
+.vr-project-img {
+    grid-area: vr-project-img;
+}
+
+.tidal-tussle-desc {
+    grid-area: tidal-tussle-desc;
+}
+
+.traffic-game-desc {
+    grid-area: traffic-game-desc;
+}
+
+.vr-desc {
+    grid-area: vr-desc;
+}
+
+.experience-title {
+    padding-left: 10%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-shadow: gray 2px 2px;
 }
