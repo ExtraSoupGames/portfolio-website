@@ -39,6 +39,11 @@
     text-transform: uppercase;
     border-right: 1px solid #f0ede8;
     cursor: default;
+    text-decoration: none;
+}
+
+.nav-item.active {
+    text-decoration: underline;
 }
 
 .search-bar {
@@ -103,3 +108,16 @@ h1 {
     padding: 40px;
 }
 
+.game-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2%;
+}
+
+h2 {
+    font-family: "Bitcount", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
