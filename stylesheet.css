@@ -23,6 +23,11 @@
     min-height: calc(100vh - 64px);
 }
 
+
+p {
+    font-family: 'Roboto Mono', monospace;
+}
+
 .nav {
     background: #fff;
     border-bottom: 1px solid #e8e4de;
