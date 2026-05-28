@@ -100,8 +100,7 @@ h1 .name-styling:hover {
 
 h1 {
     font-family: "Bitcount", system-ui;
-    font-optical-sizing: auto;
-    font-style: normal;
+    font-size: 48px !important;
 }
 
 .browser-intro {
@@ -172,4 +171,8 @@ hr.animate {
   to {
     width: 80%;
   }
+}
+
+.project-title {
+    padding-left: 10%;
 }
