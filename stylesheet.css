@@ -87,14 +87,14 @@ p {
 }
 
 h1 .name-styling {
-    font-size: 64px;
+    font-size: 78px;
     color: #afbe7a;
     text-shadow: gray 2px 2px;
     transition: font-size 0.3s ease, color 0.3s ease;
 }
 
 h1 .name-styling:hover {
-    font-size: 72px;
+    font-size: 84px;
     color: #94a067;
 }
 
@@ -122,7 +122,7 @@ h1 {
 
 h2 {
     font-family: "Bitcount", system-ui;
-    font-optical-sizing: auto;
+    font-size: 26px;
     font-style: normal;
 }
 
@@ -158,6 +158,7 @@ h2 {
     align-items: flex-start;
     min-height: 200px;
     text-align: centre;
+    position: relative;
 }
 
 .personal-intro a {
@@ -195,4 +196,64 @@ hr.animate {
 .sprite {
     width: 60px;
     image-rendering: pixelated;
+}
+
+.laptop-sprite {
+    position: absolute;
+    bottom: 0;
+    right: 8%;
+    width: 80px;
+    image-rendering: pixelated;
+}
+
+.project-images-gd img {
+    width: 275px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-images-gd img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.project-images-gd {
+    display: grid;
+    justify-content: centre;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "due-process-img loco-comotives-img network-library-img"
+        "dp-desc lc-desc udp-desc";
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    gap: 5%;
+}
+
+.due-process-img {
+    grid-area: due-process-img;
+}
+
+.loco-comotives-img {
+    grid-area: loco-comotives-img;
+}
+
+.network-library-img {
+    grid-area: network-library-img;
+}
+
+.dp-desc {
+    grid-area: dp-desc;
+}
+
+.lc-desc {
+    grid-area: lc-desc;
+}
+
+.udp-desc {
+    grid-area: udp-desc;
 }
