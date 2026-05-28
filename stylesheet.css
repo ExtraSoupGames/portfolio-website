@@ -80,6 +80,12 @@ h1 .name-styling {
     font-size: 48px;
     color: #afbe7a;
     text-shadow: gray 2px 2px;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+h1 .name-styling:hover {
+    font-size: 56px;
+    color: #94a067;
 }
 
 h1 {
@@ -88,7 +94,7 @@ h1 {
     font-style: normal;
 }
 
-.browser-content {
+.browser-intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
