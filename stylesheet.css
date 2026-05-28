@@ -176,3 +176,15 @@ hr.animate {
 .project-title {
     padding-left: 10%;
 }
+
+.intro-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.sprite {
+    width: 60px;
+    image-rendering: pixelated;
+}
