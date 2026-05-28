@@ -157,3 +157,19 @@ h2 {
     align-items: flex-start;
     min-height: 200px;
 }
+
+hr {
+  border: none;
+  border-top: 1px solid #000;
+  width: 0;
+}
+
+hr.animate {
+  animation: expandLine 1s ease forwards;
+}
+
+@keyframes expandLine {
+  to {
+    width: 80%;
+  }
+}

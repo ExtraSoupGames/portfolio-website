@@ -16,3 +16,15 @@ document.querySelectorAll('.nav-item').forEach(link => {
     }, 300);
   });
 });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+    }
+  });
+});
+
+document.querySelectorAll('hr').forEach(hr => {
+  observer.observe(hr);
+});
