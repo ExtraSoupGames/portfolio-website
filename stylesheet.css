@@ -14,6 +14,7 @@
 .browser-window {
     width: 100%;
     max-width: 80%;
+    max-height: 90%;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -75,6 +76,12 @@
     color: #666;
 }
 
+h1 .name-styling {
+    font-size: 48px;
+    color: #afbe7a;
+    text-shadow: gray 2px 2px;
+}
+
 h1 {
     font-family: "Bitcount", system-ui;
     font-optical-sizing: auto;
@@ -89,3 +96,4 @@ h1 {
     min-height: 400px;
     padding: 40px;
 }
+
