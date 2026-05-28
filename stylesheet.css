@@ -21,3 +21,71 @@
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);
     min-height: 500px;
 }
+
+.nav {
+    background: #fff;
+    border-bottom: 1px solid #e8e4de;
+    display: flex;
+}
+
+.nav-item {
+    padding: 8px 16px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #555;
+    text-transform: uppercase;
+    border-right: 1px solid #f0ede8;
+    cursor: default;
+}
+
+.search-bar {
+    background: #f0ede8;
+    border-bottom: 1px solid #d8d4cc;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.browser-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.browser-address {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #d0ccc4;
+    border-radius: 5px;
+    padding: 3px 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: #666;
+}
+
+h1 {
+    font-family: "Bitcount", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.browser-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 400px;
+    padding: 40px;
+}
