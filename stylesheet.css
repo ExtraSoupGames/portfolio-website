@@ -126,6 +126,13 @@ h2 {
     font-style: normal;
 }
 
+div {
+    font-family: "Bitcount", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
 @keyframes fadeOut {
   to {
     opacity: 0;
@@ -175,4 +182,15 @@ hr.animate {
 
 .project-title {
     padding-left: 10%;
+}
+
+
+.maingrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.maingrid div {
+  padding: 10px;
 }
