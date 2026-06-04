@@ -156,7 +156,7 @@ div {
     animation: fadeIn 0.5s ease both;
 }
 
-.personal-intro {
+.bio-styling {
     display: flex;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -169,7 +169,7 @@ div {
     position: relative;
 }
 
-.personal-intro a {
+.bio-styling a {
     text-decoration: underline;
     color: #000;
 }
