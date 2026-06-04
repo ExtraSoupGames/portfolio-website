@@ -29,6 +29,10 @@ p {
     font-family: 'Roboto Mono', monospace;
 }
 
+li {
+    font-family: 'Roboto Mono', monospace;
+}
+
 .nav {
     background: #fff;
     border-bottom: 1px solid #e8e4de;
