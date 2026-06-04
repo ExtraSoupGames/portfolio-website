@@ -317,3 +317,37 @@ hr.animate {
     padding-bottom: 20px;
     text-shadow: gray 2px 2px;
 }
+
+
+
+
+.maingrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.maingrid div {
+  padding: 10px;
+}
+
+
+.gallery{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+
+.gallery img {
+    height: 250px;
+    flex: 1;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    transition: 0.2s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.gallery img:hover{
+    flex: 2
+}
