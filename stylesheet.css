@@ -168,7 +168,7 @@ div {
     padding-right: 8%;
     justify-content: center;
     align-items: flex-start;
-    min-height: 150px;
+    min-height: 100px;
     text-align: centre;
     position: relative;
 }
@@ -473,4 +473,21 @@ hr.animate {
     border: 1px solid powderblue;
     border-left: 3px solid powderblue;
     border-radius: 4px;
+}
+
+.loco-features{
+    display: grid;
+    justify-content: centre;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr;
+    grid-template-areas: 
+        "loco-future loco-systems";
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    align-items: start;
+    gap: 8px 8px;
+    transition: transform 0.3s ease;
+    margin-top: 40px;
+    width: 90%;
 }
