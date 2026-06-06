@@ -47,21 +47,30 @@
                 <br>
             <hr width="80%" size="2" color="gray">
             <div class="bio-styling">
-                <p>Bio about Tidal Tussle</p>
+                <p>Tidal Tussle was a game I made for my third year Multiplayer Games Development university module. I was tasked with
+                    creating a game using either Unity, Unreal, or C++ with SDL that implemented networking technologies. I decided to 
+                    use C++ with SDL and first researched different networking protocols available to me. This research led me to choose
+                    UDP over TCP as my protocol.
+                </p>
             </div>
             <hr width="80%" size="2" color="gray">
             <br>
             <div class="maingrid-networking">
-                <img src="images/UDPGameNetworkingGIF.gif" alt="UDPGameNetworking Demo" class="demo-img"/>
-                <div>
-                <h2>Main features:</h2>
+                <div>                
+                    <h2>UDP:</h2>
                     <ul class="features-list-tt">
-                        <li>UDP Data streaming</li>
-                        <li>Message acknowledgement option (TCP style)</li>
-                        <li>Value interpolation option</li>
-                        <li>Custom data transmission option</li>
+                        <li>Lower ping</li>
+                        <li>TCP features can be implemented</li>
+                        <li>More implementation required to make stable systems</li>
                     </ul>
-                </p>
+                </div>
+                <div>
+                <h2>TCP:</h2>
+                    <ul class="features-list-tt">
+                        <li>Message acknowledgement</li>
+                        <li>Slower messages (confirmation required)</li>
+                        <li>Easier to use out of the box</li>
+                    </ul>
                 </div>
             </div>
         </div>
