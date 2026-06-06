@@ -322,10 +322,15 @@ hr.animate {
     text-shadow: gray 2px 2px;
 }
 
-
-
-
 .maingrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-left: 10px;
+    width: 100%;
+}
+
+
+.maingrid-networking {
     display: grid;
     grid-template-columns: 40% 60%;
     padding-left: 10%;
@@ -367,7 +372,7 @@ hr.animate {
     text-shadow: 2px 2px 5px plum;
 }
 
-.joystick {
+.joystick, .fish {
     height: 70px;
     float: right;
 }
@@ -432,4 +437,40 @@ hr.animate {
 .subtle {
   color: #888;
   font-size: 0.85em;
+}
+
+.maingrid-dueprocess {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "iframe dp-responsibilities";
+    gap: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+}
+
+.dp-responsibilities {
+    grid-area: dp-responsibilities;
+}
+
+.iframe {
+    grid-area: iframe;
+    align-self: center;
+}
+
+.features-list-tt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    text-align: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.features-list-tt li {
+    border: 1px solid powderblue;
+    border-left: 3px solid powderblue;
+    border-radius: 4px;
 }
