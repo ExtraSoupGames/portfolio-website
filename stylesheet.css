@@ -433,3 +433,21 @@ hr.animate {
   color: #888;
   font-size: 0.85em;
 }
+
+
+.loco-features{
+    display: grid;
+    justify-content: centre;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr;
+    grid-template-areas: 
+        "loco-future loco-systems";
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    align-items: start;
+    gap: 8px 8px;
+    transition: transform 0.3s ease;
+    margin-top: 40px;
+    width: 90%;
+}
