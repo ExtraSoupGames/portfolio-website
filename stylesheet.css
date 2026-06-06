@@ -355,3 +355,45 @@ hr.animate {
 .gallery img:hover{
     flex: 2
 }
+
+
+.timeline {
+  position: relative;
+  padding-left: 12%;
+  padding-right: 10%
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: calc(10% - 1px); /* align with where content starts */
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #000;
+}
+.entry {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.entry::before {
+  content: '';
+  position: absolute;
+  left: calc(-2% - 14px); /* pulls it back to sit on the line */
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #000;
+}
+.entry div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.subtle {
+  color: #888;
+  font-size: 0.85em;
+}
