@@ -709,3 +709,349 @@ hr.animate {
     background: #7a8c4a;
     transform: translateY(-2px);
 }
+
+/* ============================================
+   MOBILE FIXES — paste at the bottom of stylesheet.css
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* --- Outer wrapper --- */
+  .grid-bg {
+    padding: 12px;
+  }
+
+  .browser-window {
+    max-width: 100%;
+  }
+
+  /* --- Nav: allow wrapping, smaller text --- */
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    font-size: 9px;
+    padding: 6px 10px;
+  }
+
+  /* --- Intro --- */
+  .browser-intro {
+    min-height: 280px;
+    padding: 8%;
+  }
+
+  h1 .name-styling {
+    font-size: 48px;
+  }
+
+  h1 .name-styling:hover {
+    font-size: 52px;
+  }
+
+  h1 {
+    font-size: 36px !important;
+  }
+
+  /* --- Bio: hide the laptop sprite on mobile, it overlaps text --- */
+  .laptop-sprite {
+    display: none;
+  }
+
+  .bio-styling {
+    padding: 4% 6%;
+  }
+
+  /* --- Projects: one card per project (image → title → description) --- */
+  .project-images-gd {
+    display: flex;
+    flex-direction: column;
+    padding: 0 6%;
+    width: auto;
+    margin-top: 20px;
+    gap: 0;
+  }
+
+  /* Each image becomes the top of its card */
+  .project-images-gd img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+    display: block;
+  }
+
+  /* Each desc block becomes the bottom of its card */
+  .project-images-gd > div {
+    border: 1px solid #e8e4de;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 12px 16px 20px;
+    margin-bottom: 20px;
+    background: #fafaf8;
+  }
+
+  .project-images-gd > div h2 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+  }
+
+  .project-images-gd > div p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #555;
+  }
+
+  .project-images-gd a {
+    font-size: 20px;
+  }
+
+  /* Reset grid-area since we're using flex now */
+  .due-process-img,
+  .loco-comotives-img,
+  .network-library-img,
+  .tidal-tussle-img,
+  .traffic-game-img,
+  .vr-project-img,
+  .dp-desc,
+  .lc-desc,
+  .udp-desc,
+  .tidal-tussle-desc,
+  .traffic-game-desc,
+  .vr-desc {
+    grid-area: unset;
+  }
+
+  /* Force the correct visual order so image always comes before its desc */
+  .due-process-img    { order: 1; }
+  .dp-desc            { order: 2; }
+  .loco-comotives-img { order: 3; }
+  .lc-desc            { order: 4; }
+  .network-library-img{ order: 5; }
+  .udp-desc           { order: 6; }
+  .tidal-tussle-img   { order: 7; }
+  .tidal-tussle-desc  { order: 8; }
+  .traffic-game-img   { order: 9; }
+  .traffic-game-desc  { order: 10; }
+  .vr-project-img     { order: 11; }
+  .vr-desc            { order: 12; }
+
+  /* --- Skills: remove the crushing side padding --- */
+  .skills-section {
+    padding: 0 4%;
+    padding-bottom: 4%;
+  }
+
+  .bento {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* --- Timeline: stack date below description --- */
+  .entry div {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .subtle {
+    font-size: 0.8em;
+  }
+
+  /* --- Contact: single column form --- */
+  .contact-section {
+    padding: 0 6%;
+    padding-bottom: 6%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Section titles --- */
+  .project-title,
+  .experience-title {
+    padding-left: 6%;
+  }
+
+  .project-images-gd img {
+  display: none;
+}
+
+.project-images-gd > div {
+  border: 1px solid #e8e4de;
+  border-radius: 10px;
+  padding: 12px 16px 20px;
+  margin-bottom: 12px;
+  background: #fafaf8;
+}
+
+  .maingrid {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    width: 100%;
+  }
+ 
+  .maingrid iframe {
+    width: 100%;
+    height: 220px;
+  }
+ 
+  /* --- Bottom section: stack Steam widget above responsibilities --- */
+  .maingrid-dueprocess {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "iframe"
+      "dp-responsibilities";
+    padding-left: 5%;
+    padding-right: 5%;
+    width: auto;
+    gap: 20px;
+  }
+ 
+  .maingrid-dueprocess .iframe iframe {
+    width: 100%;
+    height: 190px;
+  }
+ 
+  /* --- Responsibilities list: single column, full width --- */
+  .features-list {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+ 
+  /* --- Game content padding --- */
+  .game-content {
+    padding: 4%;
+  }
+
+  .maingrid {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    width: 100%;
+  }
+ 
+  .maingrid video {
+    width: 100%;
+    height: auto;
+  }
+ 
+  /* --- loco-features: stack text above systems list --- */
+  .loco-features {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    width: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 20px;
+  }
+ 
+  /* --- Gallery: fixed height so it doesn't go tiny --- */
+  .gallery img {
+    height: 160px;
+  }
+ 
+  /* --- Game content padding --- */
+  .game-content {
+    padding: 4%;
+  }
+
+    .maingrid iframe {
+    width: 100%;
+    height: 220px;
+  }
+ 
+  /* --- Joystick: stop it floating awkwardly --- */
+  .joystick {
+    float: none;
+    display: block;
+    margin-top: 12px;
+  }
+ 
+  /* --- Features section: stack gif above features list --- */
+  .maingrid-networking {
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: auto;
+  }
+ 
+  .maingrid-networking .demo-img {
+    width: 100%;
+    height: auto;
+  }
+ 
+  /* --- Features list: single column --- */
+  .features-list {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+ 
+  /* --- Title overflowing off screen --- */
+  .networking-header {
+    font-size: 1.6rem !important;
+    word-break: break-word;
+  }
+
+    .maingrid .demo-img {
+    width: 100%;
+    height: auto;
+  }
+ 
+  /* --- Joystick: stop floating into the h2 --- */
+  .joystick {
+    float: none;
+    display: block;
+    margin-top: 12px;
+  }
+ 
+  /* --- VR features section: stack image above list --- */
+  .maingrid-vr {
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: auto;
+  }
+ 
+  .maingrid-vr .demo-img {
+    width: 100%;
+    height: auto;
+  }
+ 
+  /* --- h2 getting clipped --- */
+  h2 {
+    font-size: 20px !important;
+    word-break: break-word;
+  }
+
+    .traffic {
+    float: none;
+    display: block;
+    margin-top: 12px;
+  }
+ 
+  /* --- Top: gameplay gif full width --- */
+  .maingrid .demo-img {
+    width: 100%;
+    height: auto;
+  }
+ 
+  /* --- Bottom: stack cover image above text --- */
+  .maingrid-traffic {
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: auto;
+  }
+ 
+  .maingrid-traffic .demo-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
