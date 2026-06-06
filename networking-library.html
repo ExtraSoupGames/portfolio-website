@@ -29,8 +29,51 @@
             <a class="nav-item">Contact</a>
         </div>
         <div class="game-content">
-            <h1>UDPGameNetworking</h1>
-            <h2>A games focussed networking library built on UDP with C++ and SDL3 with SDLNet</h2>
+            <div class="maingrid">
+                <div>
+                    <h1>UDPGameNetworking</h1>
+                    <h2>A general purpose UDP networking library, built in C++ with SDL3 and SDLNet</h2>
+                </div>
+                <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/ibkF_ioUvFo?autoplay=1&mute=1"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                loop="1"
+                controls="0"></iframe>            </div>
+            <hr width="80%" size="2" color="gray">
+            <div class="bio-styling">
+                <p>After finishing my <a href="tidal-tussle.html">University Game Networking Project</a>. I felt that the networking code could have been improved,
+                     and following the recent full release of SDL3, I decided to make a games networking library. I wanted to keep the advantages of my original code;
+                     fast messages sent over UDP, and value interpolation. However the code needed a full refactor to generalise the data streaming. I added all of these
+                    features, and made a small demo, which can be found in the <a href="https://github.com/ExtraSoupGames/UDPGameNetworking">GitHub repo</a>.</p>
+            </div>
+            <hr width="80%" size="2" color="gray">
+            <div class="maingrid">
+                <img src="images/UDPGameNetworkingGIF.gif" alt="UDPGameNetworking Demo" />
+                <div>
+                <p>Main library features:
+                    <ul>
+                        <li>UDP Data streaming</li>
+                        <li>Message acknowledgement option (TCP style)</li>
+                        <li>Value interpolation option</li>
+                        <li>Custom data transmission option</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+        </div>
+            <hr width="80%" size="2" color="gray">
+
+            <div class="bio-styling">
+                <p>While the library works on its own, there is more I would like to do with this project.
+                    Most notably, I would love to make an engine specific-wrapper, as well as an extension,
+                    for Unity for example, to allow this library to be used within an engine without extensive
+                    setup. I would also love to provide better documentation, implement NAT traversal, and
+                     make a more extensive demo.
+                </p>
+            </div>
         </div>
     </div>
 </div>

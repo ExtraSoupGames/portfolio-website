@@ -29,6 +29,10 @@ p {
     font-family: 'Roboto Mono', monospace;
 }
 
+li {
+    font-family: 'Roboto Mono', monospace;
+}
+
 .nav {
     background: #fff;
     border-bottom: 1px solid #e8e4de;
@@ -127,6 +131,13 @@ h2 {
     font-style: normal;
 }
 
+div {
+    font-family: "Bitcount", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
 @keyframes fadeOut {
   to {
     opacity: 0;
@@ -149,7 +160,7 @@ h2 {
     animation: fadeIn 0.5s ease both;
 }
 
-.personal-intro {
+.bio-styling {
     display: flex;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -157,12 +168,12 @@ h2 {
     padding-right: 8%;
     justify-content: center;
     align-items: flex-start;
-    min-height: 200px;
+    min-height: 150px;
     text-align: centre;
     position: relative;
 }
 
-.personal-intro a {
+.bio-styling a {
     text-decoration: underline;
     color: #000;
 }
@@ -309,4 +320,38 @@ hr.animate {
     padding-top: 10px;
     padding-bottom: 20px;
     text-shadow: gray 2px 2px;
+}
+
+
+
+
+.maingrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.maingrid div {
+  padding: 10px;
+}
+
+
+.gallery{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+
+.gallery img {
+    height: 250px;
+    flex: 1;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    transition: 0.5s all cubic-bezier(0.175, 0.885, 0.32, 1);
+    cursor: pointer;
+}
+
+.gallery img:hover{
+    flex: 2
 }
