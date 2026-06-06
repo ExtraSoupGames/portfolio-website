@@ -343,6 +343,18 @@ hr.animate {
 }
 
 
+.maingrid-traffic {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+}
+.maingrid-traffic div{
+
+}
+
+
 .gallery{
     display: flex;
     width: 100%;
