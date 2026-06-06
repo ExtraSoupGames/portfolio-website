@@ -525,3 +525,187 @@ hr.animate {
     border-left: 3px solid black;
     border-radius: 4px;
 }
+
+.skills-section {
+    padding: 0% 20%;
+    padding-bottom: 2%;
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.92rem 2.16rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: slideIn 0.5s ease both;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+}
+
+.card:nth-child(1) { grid-column: span 4; background: #f0f4e8; animation-delay: 0.05s; }
+.card:nth-child(2) { grid-column: span 2; background: #fdf0f0; animation-delay: 0.10s; }
+.card:nth-child(3) { grid-column: span 2; background: #f5f0e4; animation-delay: 0.15s; }
+.card:nth-child(4) { grid-column: span 4; background: #f2f4ed; animation-delay: 0.20s; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card-icon { font-size: 1.92rem; margin-bottom: 1.08rem; display: block; }
+
+.card-category {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.card:nth-child(1) .card-category { color: #94a067; }
+.card:nth-child(2) .card-category { color: #d4847a; }
+.card:nth-child(3) .card-category { color: #c9b99a; }
+.card:nth-child(4) .card-category { color: #7a8c4a; }
+
+.card-title {
+  font-family: "Bitcount", system-ui;
+  font-size: 1.38rem;
+  font-weight: 600;
+  margin-bottom: 1.32rem;
+  color: #1a1a2e;
+}
+
+.pill-group { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.pill {
+  padding: 0.42rem 1.02rem;
+  border-radius: 999px;
+  font-size: 0.936rem;
+  font-family: 'Roboto Mono', monospace;
+  border: 1px solid transparent;
+  cursor: default;
+  transition: all 0.2s;
+}
+
+.card:nth-child(1) .pill { background: rgba(148,160,103,0.12); color: #94a067; border-color: rgba(148,160,103,0.2); }
+.card:nth-child(1) .pill:hover { background: #94a067; color: white; }
+
+.card:nth-child(2) .pill { background: rgba(212,132,122,0.12); color: #d4847a; border-color: rgba(212,132,122,0.2); }
+.card:nth-child(2) .pill:hover { background: #d4847a; color: white; }
+
+.card:nth-child(3) .pill { background: rgba(201,185,154,0.2); color: #a09070; border-color: rgba(201,185,154,0.3); }
+.card:nth-child(3) .pill:hover { background: #c9b99a; color: white; }
+
+.card:nth-child(4) .pill { background: rgba(122,140,74,0.12); color: #7a8c4a; border-color: rgba(122,140,74,0.2); }
+.card:nth-child(4) .pill:hover { background: #7a8c4a; color: white; }
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.card:nth-child(1) .blob { width: 120px; height: 120px; background: #94a067; right: -20px; top: -20px; }
+.card:nth-child(2) .blob { width:  80px; height:  80px; background: #d4847a; right: -10px; bottom: -10px; }
+.card:nth-child(3) .blob { width:  80px; height:  80px; background: #c9b99a; left: -10px;  top: -10px; }
+.card:nth-child(4) .blob { width: 100px; height: 100px; background: #7a8c4a; right: -10px; top: -10px; }
+
+@media (max-width: 640px) {
+  .card:nth-child(n) { grid-column: span 6; }
+}
+
+.contact-section {
+    padding: 0 20%;
+    padding-bottom: 4%;
+}
+
+.contact-intro {
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.form-input {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d0ccc4;
+    border-radius: 8px;
+    background: #fafaf8;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    border-color: #94a067;
+    box-shadow: 0 0 0 3px rgba(148, 160, 103, 0.15);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form-submit {
+    font-family: "Bitcount", system-ui;
+    font-size: 1rem;
+    background: #94a067;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.85rem 2rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s, transform 0.15s;
+    text-shadow: gray 1px 1px;
+}
+
+.form-submit:hover {
+    background: #7a8c4a;
+    transform: translateY(-2px);
+}
