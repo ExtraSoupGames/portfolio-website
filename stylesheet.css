@@ -327,12 +327,14 @@ hr.animate {
 
 .maingrid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
+    padding-left: 10%;
+    padding-right: 10%;
     width: 100%;
 }
 
 .maingrid div {
-  padding: 10px;
+
 }
 
 
@@ -354,4 +356,39 @@ hr.animate {
 
 .gallery img:hover{
     flex: 2
+}
+
+.networking-header {
+    color: purple;
+    text-shadow: black 2px 2px;
+}
+
+.glow-purple {
+    text-shadow: 2px 2px 5px plum;
+}
+
+.joystick {
+    height: 70px;
+    float: right;
+}
+
+.demo-img, iframe {
+    border: 1px solid #94a067;
+    border-radius: 6px;
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    text-align: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    border: 1px solid purple;
+    border-left: 3px solid purple;
+    border-radius: 4px;
 }

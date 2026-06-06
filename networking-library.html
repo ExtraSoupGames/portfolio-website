@@ -31,8 +31,9 @@
         <div class="game-content">
             <div class="maingrid">
                 <div>
-                    <h1>UDPGameNetworking</h1>
-                    <h2>A general purpose UDP networking library, built in C++ with SDL3 and SDLNet</h2>
+                    <h1 class="networking-header">UDPGameNetworking</h1>
+                    <h2>A general purpose <span class="glow-purple">UDP networking library</span>, built in <span class="glow-purple">C++</span> with <span class="glow-purple">SDL3</span> and <span class="glow-purple">SDLNet</span></h2>
+                <img src="images/game-stick.gif" alt="Joystick" class="joystick">
                 </div>
                 <iframe 
                 width="560" 
@@ -41,20 +42,23 @@
                 allow="autoplay; encrypted-media"
                 allowfullscreen
                 loop="1"
-                controls="0"></iframe>            </div>
+                controls="0"></iframe>            
+            </div>
+                <br>
             <hr width="80%" size="2" color="gray">
             <div class="bio-styling">
-                <p>After finishing my <a href="tidal-tussle.html">University Game Networking Project</a>. I felt that the networking code could have been improved,
-                     and following the recent full release of SDL3, I decided to make a games networking library. I wanted to keep the advantages of my original code;
+                <p>After finishing my <b><a href="tidal-tussle.html">University Game Networking Project</a></b>. I felt that the networking code could have been improved,
+                     and following the recent full release of <b>SDL3</b>, I decided to make a <b>games networking library</b>. I wanted to keep the advantages of my original code;
                      fast messages sent over UDP, and value interpolation. However the code needed a full refactor to generalise the data streaming. I added all of these
                     features, and made a small demo, which can be found in the <a href="https://github.com/ExtraSoupGames/UDPGameNetworking">GitHub repo</a>.</p>
             </div>
             <hr width="80%" size="2" color="gray">
+            <br>
             <div class="maingrid">
-                <img src="images/UDPGameNetworkingGIF.gif" alt="UDPGameNetworking Demo" />
+                <img src="images/UDPGameNetworkingGIF.gif" alt="UDPGameNetworking Demo" class="demo-img"/>
                 <div>
-                <p>Main library features:
-                    <ul>
+                <h2>Main library features:</h2>
+                    <ul class="features-list">
                         <li>UDP Data streaming</li>
                         <li>Message acknowledgement option (TCP style)</li>
                         <li>Value interpolation option</li>
