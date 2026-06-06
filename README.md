@@ -4,6 +4,5 @@ Website is available [here](https://extrasoupgames.github.io/portfolio-website/)
 
 ## Todo
 - Improve VR page
-- Finish contact form
 - Improve Tidal tussle page
 - Add github links to each project page

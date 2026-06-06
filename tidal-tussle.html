@@ -29,13 +29,57 @@
             <a class="nav-item">Contact</a>
         </div>
         <div class="game-content">
-            <div class="maingrid">
+            <div class="maingrid-tt">
                 <div>
                     <h1>Tidal Tussle</h1>
                     <h2>A small game demo about fighting enemies off of a ship, utilising custom UDP networking with SDL</h2>
-                <img src="images/fish.gif" alt="Fish" class="fish">
+                        <div class="tt-grade-badge">
+                        <i class="ti ti-school" aria-hidden="true" style="font-size:16px;"></i>
+                        University grade: <span class="tt-grade-num">95%</span> 
+                    </div>
+                    <img src="images/fish.gif" alt="Fish" class="fish">
                 </div>
-                <img src="images/tidal-example.png" width ="462" height="270">           
+                <div>
+                                    <div class="tt-terminal">
+                    <div class="tt-terminal-bar">
+                        <div class="tt-dot tt-dot-r"></div>
+                        <div class="tt-dot tt-dot-y"></div>
+                        <div class="tt-dot tt-dot-g"></div>
+                        <span class="tt-filename">ServerManager.cpp</span>
+                    </div>
+                    <div class="tt-code">
+<span class="kw">void</span> <span class="fn">ServerManager::Send</span>(<span class="tp">bitset</span>&lt;<span class="tp">32</span>&gt; headerData,
+  <span class="tp">vector</span>&lt;<span class="tp">bitset</span>&lt;<span class="tp">8</span>&gt;&gt; packetData,
+  <span class="tp">IPaddress</span> address, <span class="kw">int</span> length) {
+ 
+  <span class="cm">// Allocate packet sized to the data</span>
+  <span class="tp">UDPpacket</span>* packet = <span class="fn">SDLNet_AllocPacket</span>(length);
+  <span class="kw">if</span> (!packet) {
+    std::cerr &lt;&lt; <span class="str">"SDLNet_AllocPacket: "</span>
+              &lt;&lt; <span class="fn">SDLNet_GetError</span>() &lt;&lt; std::endl;
+    <span class="fn">SDLNet_UDP_Close</span>(socket);
+    <span class="fn">SDL_Quit</span>();
+  }
+ 
+  <span class="cm">// Copy header to start of packet data</span>
+  <span class="fn">memcpy</span>(packet-&gt;data, &amp;headerData, <span class="tp">4</span>);
+ 
+  <span class="cm">// Iterate, copying each byte</span>
+  <span class="kw">for</span> (<span class="kw">int</span> i = <span class="tp">0</span>; i &lt; packetData.<span class="fn">size</span>(); i++) {
+    <span class="fn">memcpy</span>(packet-&gt;data + <span class="tp">4</span> + i,
+      &amp;packetData.<span class="fn">at</span>(i), <span class="tp">1</span>);
+  }
+  packet-&gt;len = length + <span class="tp">1</span>;
+  packet-&gt;address = address;
+ 
+  <span class="kw">if</span> (<span class="fn">SDLNet_UDP_Send</span>(socket, -<span class="tp">1</span>, packet) == <span class="tp">0</span>) {
+    std::cerr &lt;&lt; <span class="str">"SDLNet_UDP_Send: "</span>
+              &lt;&lt; <span class="fn">SDLNet_GetError</span>() &lt;&lt; std::endl;
+  }
+}</div>
+                </div>
+            </div>
+                </div>
             </div>
                 <br>
             <hr width="80%" size="2" color="gray">
@@ -48,25 +92,52 @@
             </div>
             <hr width="80%" size="2" color="gray">
             <br>
-            <div class="maingrid-networking">
-                <div>                
-                    <h2>UDP:</h2>
-                    <ul class="features-list-tt">
-                        <li>Lower ping</li>
-                        <li>TCP features can be implemented</li>
-                        <li>More implementation required to make stable systems</li>
-                    </ul>
-                </div>
-                <div>
-                <h2>TCP:</h2>
-                    <ul class="features-list-tt">
-                        <li>Message acknowledgement</li>
-                        <li>Slower messages (confirmation required)</li>
-                        <li>Easier to use out of the box</li>
-                    </ul>
+                <div class="tt-compare">
+                <p class="tt-compare-label">Protocol decision — UDP vs TCP</p>
+                <div class="tt-compare-grid">
+
+                    <!-- UDP column -->
+                    <div class="tt-col tt-col-udp">
+                        <p class="tt-col-title">UDP ✓ chosen</p>
+                        <div class="tt-row tt-row-pro">
+                            <i class="ti ti-bolt tt-icon" aria-hidden="true"></i>
+                            <span class="tt-row-text">Lower latency — no handshake overhead per packet</span>
+                        </div>
+                        <div class="tt-row tt-row-pro">
+                            <i class="ti ti-settings tt-icon" aria-hidden="true"></i>
+                            <span class="tt-row-text">TCP features can be layered on top as needed</span>
+                        </div>
+                        <div class="tt-row tt-row-con">
+                            <i class="ti ti-tool tt-icon" aria-hidden="true"></i>
+                            <span class="tt-row-text">Requires more implementation work for stable, reliable systems</span>
+                        </div>
+                        <div class="tt-choice-banner">
+                            <i class="ti ti-check" aria-hidden="true" style="font-size:15px;"></i>
+                            Best fit for a real-time action game
+                        </div>
+                    </div>
+ 
+                    <div class="tt-col-divider">vs</div>
+ 
+                    <!-- TCP column -->
+                    <div class="tt-col tt-col-tcp">
+                        <p class="tt-col-title">TCP</p>
+                        <div class="tt-row tt-row-pro">
+                            <i class="ti ti-check tt-icon" aria-hidden="true"></i>
+                            <span class="tt-row-text">Built-in message acknowledgement and ordering</span>
+                        </div>
+                        <div class="tt-row tt-row-pro">
+                            <i class="ti ti-package tt-icon" aria-hidden="true"></i>
+                            <span class="tt-row-text">Easier to use out of the box — less to implement</span>
+                        </div>
+                        <div class="tt-row tt-row-con">
+                            <i class="ti ti-hourglass tt-icon" aria-hidden="true"></i>
+                            <span class="tt-row-text">Slower — confirmation round-trips add latency to every message</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+
         </div>
     </div>
 </div>
