@@ -491,3 +491,23 @@ hr.animate {
     margin-top: 40px;
     width: 90%;
 }
+
+.traffic {
+    float: right;
+}
+
+.features-list-traffic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    text-align: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.features-list-traffic li {
+    border: 1px solid black;
+    border-left: 3px solid black;
+    border-radius: 4px;
+}
