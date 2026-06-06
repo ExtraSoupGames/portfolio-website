@@ -338,9 +338,6 @@ hr.animate {
     width: 100%;
 }
 
-.maingrid div {
-
-}
 
 
 .maingrid-traffic {
@@ -350,8 +347,13 @@ hr.animate {
     padding-right: 10%;
     width: 80%;
 }
-.maingrid-traffic div{
 
+.maingrid-vr {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
 }
 
 
