@@ -15,3 +15,6 @@ Website is available [here](https://extrasoupgames.github.io/portfolio-website/)
 - Traffic game text is bad
 - VR GIF is wrong
 - VR text break up
+- Right align links in nav bar
+- CV download
+- Icons for nav bar links
