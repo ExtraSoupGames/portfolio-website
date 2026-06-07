@@ -45,13 +45,15 @@
             </div>
             <hr width="80%" size="2" color="gray">
             <div class="bio-styling">
-                <p>I was invited to start contributing towards <b>Due Process</b> in October of 2025, and
-                    have been fixing bugs, and improving player experience ever since. Due to the
-                    scope of the project, my main role has been to find player reports of bugs and
-                    solve them independently. Contributing to this game has taught me about the importance
-                    of considering how others will read the code you write. It is one thing to write code that
-                    works, but another to write code that others can understand easily.
-                </p>
+                <p>I was invited to start contributing towards <b>Due Process</b> in October 2025. 
+                Working within a live, shipped game, my role has been to independently triage 
+                player-reported bugs — finding them in <b>Jira</b>, tracing them through an unfamiliar 
+                codebase, and deploying fixes via <b>Plastic SCM</b>.</p>
+
+                <blockquote class="bio-quote">
+                    "Working in a live production codebase taught me that readable code 
+                    isn't optional — it's part of the job."
+                </blockquote>
             </div>
             <hr width="80%" size="2" color="gray">
             <img src="images/due-process2.jpeg" alt="Due Process Banner" width="100%"/>
@@ -81,11 +83,11 @@
                     
                     <div>  
                     <h3>Bug Spotlight🐛</h3>
+                    <p>Players reported incorrect scoping behaviour on one gun model</p>
                     <ul>
-                     <li>Players reported an issue when viewing the scope of one gun model</li>
-                     <li>I explored the issue, and the context that would cause it</li>
-                     <li>Found that an old script was retrieving the incorrect screen resolution setting</li>
-                     <li>This was skewing the scoped view, which I fixed and the scoped view is now correct</li>
+                     <li>Problem: The scoped view was visually skewed for affected players</li>
+                     <li>Cause: An old script was fetching the wrong screen resolution setting (the one for the main menu, not in-game)</li>
+                     <li>Fix: corrected resolution lookup, scoped view now renders accurately for all players</li>
                     </ul></div>
             </div>
         </div>

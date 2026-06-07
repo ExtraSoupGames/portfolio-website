@@ -1259,4 +1259,11 @@ hr.animate {
   }
 }
 
-
+.bio-quote {
+    border-left: 3px solid navy;
+    margin: 1.25rem 0 0 1rem;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #555;
+    font-size: 0.95em;
+}
