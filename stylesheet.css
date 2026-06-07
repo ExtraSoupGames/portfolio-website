@@ -506,7 +506,7 @@ hr.animate {
     padding-right: 10%;
     padding-top: 2%;
     align-items: start;
-    gap: 8px 8px;
+    gap: 5% 5%;
     transition: transform 0.3s ease;
     margin-top: 40px;
     width: 90%;
