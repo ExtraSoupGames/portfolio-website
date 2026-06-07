@@ -315,6 +315,23 @@ hr.animate {
     grid-area: vr-desc;
 }
 
+.play-btn {
+    display: inline-block;
+    font-family: "Bitcount", system-ui;
+    font-size: 1rem;
+    background: #94a067;
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-shadow: gray 1px 1px;
+    transition: background 0.2s, transform 0.15s;
+}
+.play-btn:hover {
+    background: #7a8c4a;
+    transform: translateY(-2px);
+}
+
 .experience-title {
     padding-left: 10%;
     padding-top: 10px;
