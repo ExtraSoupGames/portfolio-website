@@ -1205,6 +1205,58 @@ hr.animate {
     width: 100%;
     height: auto;
   }
+    .maingrid-tt {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    width: 100%;
+  }
+ 
+  /* --- Fish sprite: stop floating --- */
+  .fish {
+    float: none;
+    display: block;
+    margin-top: 12px;
+  }
+ 
+  /* --- Code block: contain it, allow horizontal scroll --- */
+  .tt-terminal {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    margin-top: 16px;
+  }
+ 
+  .tt-code {
+    white-space: pre;
+    font-size: 0.7rem;
+    overflow-x: auto;
+  }
+ 
+  /* --- UDP vs TCP comparison: tighten up --- */
+  .tt-compare {
+    padding: 0 4%;
+    box-sizing: border-box;
+  }
+ 
+  .tt-compare-grid {
+    gap: 8px;
+  }
+ 
+  .tt-col {
+    padding: 12px;
+  }
+ 
+  .tt-col-title {
+    font-size: 0.9rem;
+  }
+ 
+  .tt-row-text {
+    font-size: 0.75rem;
+  }
+ 
+  .tt-choice-banner {
+    font-size: 0.8rem;
+  }
 }
 
 
