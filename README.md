@@ -5,7 +5,6 @@ Website is available [here](https://extrasoupgames.github.io/portfolio-website/)
 ## Todo
 - Add github links to each page
 - Write "passionate game developer based in london" to landing page
-- Fix loco page bottom
 - Email icon with ping for contact form
 - Main responsibilities wider
 - Fix loco bio boring
