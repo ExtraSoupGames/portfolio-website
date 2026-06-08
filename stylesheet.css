@@ -408,6 +408,9 @@ hr.animate {
 .glow-purple {
     text-shadow: 2px 2px 5px plum;
 }
+.glow-green {
+    text-shadow: 2px 2px 5px green;
+}
 
 .joystick, .fish {
     height: 70px;
