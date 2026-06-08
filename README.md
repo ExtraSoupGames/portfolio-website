@@ -8,9 +8,8 @@ Website is available [here](https://jonathan-collins-portfolio.com)
 - Email icon with ping for contact form
 - Main responsibilities wider
 - Fix loco bio boring
-- UDPGameNetworking bold bits at bottom
 - Glowing for all pages
-- Tidal tussle code snipped move down
+- Tidal tussle code snippet move down
 - Traffic game text is bad
 - VR GIF is wrong
 - VR text break up
