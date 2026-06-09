@@ -12,4 +12,3 @@ Website is available [here](https://jonathan-collins-portfolio.com)
 - VR GIF is wrong
 - VR text break up
 - CV download
-- Icons for nav bar links
